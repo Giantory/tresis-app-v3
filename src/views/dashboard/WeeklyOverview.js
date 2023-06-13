@@ -64,7 +64,7 @@ const WeeklyOverview = () => {
       }
     },
     xaxis: {
-      categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      categories: ['1° Revisión', '2° Revisión', '3° Revisión', '4° Revisión', '5° Revisión', '6° Revisión', '7° Revisión'],
       tickPlacement: 'on',
       labels: { show: false },
       axisTicks: { show: false },
@@ -75,7 +75,7 @@ const WeeklyOverview = () => {
       tickAmount: 4,
       labels: {
         offsetX: -17,
-        formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}k`
+        formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}%`
       }
     }
   }
@@ -83,7 +83,7 @@ const WeeklyOverview = () => {
   return (
     <Card>
       <CardHeader
-        title='Weekly Overview'
+        title='Resultados de Similitud'
         titleTypographyProps={{
           sx: { lineHeight: '2rem !important', letterSpacing: '0.15px !important' }
         }}
@@ -94,15 +94,15 @@ const WeeklyOverview = () => {
         }
       />
       <CardContent sx={{ '& .apexcharts-xcrosshairs.apexcharts-active': { opacity: 0 } }}>
-        <ReactApexcharts type='bar' height={205} options={options} series={[{ data: [37, 57, 45, 75, 57, 40, 65] }]} />
+        <ReactApexcharts type='bar' height={205} options={options} series={[{ data: [2, 10, 17, 22, 0, 0, 0] }]} />
         <Box sx={{ mb: 7, display: 'flex', alignItems: 'center' }}>
           <Typography variant='h5' sx={{ mr: 4 }}>
-            45%
+            22%
           </Typography>
-          <Typography variant='body2'>Your sales performance is 45% 😎 better compared to last month</Typography>
+          <Typography variant='body2'>Tu resultado antiplagio es del 22% 😎 , en tu <strong>Tesis</strong>. Recuerde mantener el nivel de similitud menor a 25% </Typography>
         </Box>
         <Button fullWidth variant='contained'>
-          Details
+          Detalles
         </Button>
       </CardContent>
     </Card>

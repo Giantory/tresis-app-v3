@@ -17,7 +17,7 @@ const TriangleImg = styled('img')({
 const TrophyImg = styled('img')({
   right: 36,
   bottom: 20,
-  height: 98,
+  height: 105,
   position: 'absolute'
 })
 
@@ -29,18 +29,22 @@ const Trophy = () => {
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
-        <Typography variant='h6'>Congratulations John! 🥳</Typography>
+        <Typography variant='h5'>Bienvenido, <strong>Daniel</strong> 🥳</Typography>
+        <Typography variant='body2' sx={{ letterSpacing: '0.25px' ,mt: 3}}>
+          dfigueroam@ucvvirtual.edu.pe
+        </Typography>
+        
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          Best seller of the month
+          Lima Norte
         </Typography>
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
-          $42.8k
+          7002507513
         </Typography>
         <Button size='small' variant='contained'>
-          View Sales
+          VER DATOS
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
-        <TrophyImg alt='trophy' src='/images/misc/trophy.png' />
+        <TrophyImg alt='trophy' src='https://i.ibb.co/qxhLh8L/user.png  ' sx={{mb:0}} />
       </CardContent>
     </Card>
   )
